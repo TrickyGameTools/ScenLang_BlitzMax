@@ -1,0 +1,7 @@
+[vars]
+Copyright=Your name
+License=Your license text
+Lang1=English
+Lang2=Dutch
+Lang1.File=<myproject>/MyScenario/English
+Lang2.File=<myproject>/MyScenario/Dutch

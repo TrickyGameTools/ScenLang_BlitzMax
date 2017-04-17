@@ -5,7 +5,7 @@ MKL_Backup
 
 # These files are personal
 
-Projects
+Projects/*
 
 # Except for this one
 !Projects/Sample
