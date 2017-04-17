@@ -20,3 +20,5 @@ Scenlang.debug
 # But the actual source files must be included
 !*.bmx
 !*.icns
+
+# Don't put this in the repository. This is just a release version and will be uploaded in the releases section.

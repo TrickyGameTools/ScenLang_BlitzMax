@@ -29,6 +29,10 @@ Import    tricky_units.GINI
 Import    tricky_units.FilePicker
 Import    tricky_units.Bye
 
+?Win32
+Import "Icons/TorenVanBabel.o"
+?
+
 
 
 
@@ -154,6 +158,7 @@ Global editmenu:TGadget = CreateMenu("Edit",0,WindowMenu(Window))
 ListAddLast NeedActive,CreateMenu("Cut"  ,9991,editmenu,KEY_X,Modifier_command)
 ListAddLast needactive,CreateMenu("Copy" ,9992,editmenu,KEY_C,Modifier_command)
 ListAddLast needactive,CreateMenu("Paste",9993,editmenu,KEY_V,Modifier_command)
+UpdateWindowMenu window
 
 ' Functions
 Function StatusPrint(A$)
@@ -281,7 +286,7 @@ End Function
 
 Function CurrentTag$()
 Local E$=currententry()
-If Not E Error "Hey, you cannot select a tag when there's not entry selected! What the hell is going on here?"
+If Not E Return ' Error "Hey, you cannot select a tag when there's not entry selected! What the hell is going on here?"
 Local s = SelectedGadgetItem(Tagmap)
 If S<0 Return
 Return GadgetItemText(TagMap,s)
@@ -454,6 +459,7 @@ Local TM0:tlangtags ' will always contain Null, I just needed a var for it or we
 Local TM1:tlangtags = langtagmap(L[1],E)
 Local TM2:tlangtags = langtagmap(L[2],E)
 Local TM:Tlangtags[] = [TM0,TM1,TM2]
+If Not t return
 TM1.LLat(T).EAI(TBPage).Text = TextAreaText(Text[1])
 TM2.LLat(T).EAI(TBPage).Text = TextAreaText(Text[2])
 TM1.LLat(T).EAI(TBPage).PicSpecific = TextFieldText(PicSpecific)
