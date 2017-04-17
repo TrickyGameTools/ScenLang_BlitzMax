@@ -1,7 +1,9 @@
 # We don't need these
 License.MKL.ini
 MKL_Backup
-.*
+.DS_Store
+._*
+.bmx
 
 # These files are personal
 
