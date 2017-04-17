@@ -1,0 +1,22 @@
+# We don't need these
+License.MKL.ini
+MKL_Backup
+
+
+# These files are personal
+
+Projects
+
+# Except for this one
+!Projects/Sample
+
+# Any builds must be avoided
+Scenlang
+Scenlang.app
+Scenlang.debug.app
+Scenlang.debug
+*.exe
+
+# But the actual source files must be included
+!*.bmx
+!*.icns
