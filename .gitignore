@@ -1,7 +1,7 @@
 # We don't need these
 License.MKL.ini
 MKL_Backup
-
+.*
 
 # These files are personal
 
